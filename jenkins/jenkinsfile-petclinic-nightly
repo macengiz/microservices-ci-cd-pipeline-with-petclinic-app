@@ -2,7 +2,7 @@ pipeline {
     agent { label "master" }
     environment {
         PATH=sh(script:"echo $PATH:/usr/local/bin", returnStdout:true).trim()
-        APP_NAME="Petclinic"
+        APP_NAME="petclinic"
         APP_STACK_NAME="Matt-${APP_NAME}-app-${BUILD_NUMBER}"
         APP_REPO_NAME="clarusway-repo/${APP_NAME}-app-dev"
         AWS_ACCOUNT_ID=sh(script:'export PATH="$PATH:/usr/local/bin" && aws sts get-caller-identity --query Account --output text', returnStdout:true).trim()
