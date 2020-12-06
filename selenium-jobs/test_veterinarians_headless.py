@@ -3,31 +3,28 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
+import os
 
 # Set chrome options for working with headless mode (no screen)
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("headless")
+chrome_options.add_argument("no-sandbox")
+chrome_options.add_argument("disable-dev-shm-usage")
 
 # Update webdriver instance of chrome-driver with adding chrome options
-driver = webdriver.Chrome(executable_path="/usr/bin/chromedriver", options=chrome_options)
-# driver = webdriver.Chrome("/Users/home/Desktop/chromedriver", options=chrome_options)
-driver.implicitly_wait(30)
-
+driver = webdriver.Chrome(options=chrome_options)
 
 # Connect to the application
-url = "http://ec2-3-234-241-135.compute-1.amazonaws.com:8080"
-# url = "http://localhost:8080"
-
+APP_IP = os.environ['MASTER_PUBLIC_IP']
+url = "http://"+APP_IP.strip()+":8080/"
+print(url)
 driver.get(url)
-sleep(3)
-
 vet_link = driver.find_element_by_link_text("VETERINARIANS")
 vet_link.click()
-sleep(5)
 
 # Verify that table loaded
+sleep(1)
 verify_table = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "table")))
-sleep(3)
 
 print("Table loaded")
 
