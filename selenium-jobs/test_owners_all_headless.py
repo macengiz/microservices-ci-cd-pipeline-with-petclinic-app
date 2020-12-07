@@ -18,13 +18,20 @@ APP_IP = os.environ['MASTER_PUBLIC_IP']
 url = "http://"+APP_IP.strip()+":8080/"
 print(url)
 driver.get(url)
+sleep(10)
+
 owners_link = driver.find_element_by_link_text("OWNERS")
+
+sleep(10)
 owners_link.click()
+
 all_link = driver.find_element_by_link_text("ALL")
+
+sleep(10)
 all_link.click()
 
 # Verify that table loaded
-sleep(1)
+sleep(10)
 verify_table = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "table")))
 
 print("Table loaded")
