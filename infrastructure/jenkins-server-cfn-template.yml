@@ -105,8 +105,8 @@ Resources:
           ./aws/install
           # install aws ecr credential helper
           yum install amazon-ecr-credential-helper -y
-          mkdir -p /home/jenkins/.docker
-          cd /home/jenkins/.docker
+          mkdir -p /var/lib/jenkins/.docker
+          cd /var/lib/jenkins/.docker
           echo '{"credsStore": "ecr-login"}' > config.json
           # install python 3
           yum install python3 -y
