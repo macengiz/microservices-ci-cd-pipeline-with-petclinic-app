@@ -1,0 +1,99 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "matt-petclinic-production-cluster"
+  cluster:
+    server: "https://rancher.macengiz.com/k8s/clusters/c-52tqz"
+- name: "matt-petclinic-production-cluster-etcd-ctrl-2"
+  cluster:
+    server: "https://18.206.242.216:6443"
+    certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN3akNDQ\
+      WFxZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFTTVJBd0RnWURWUVFERXdkcmRXSmwKT\
+      FdOaE1CNFhEVEl3TVRJeE9USXdNelF6TTFvWERUTXdNVEl4TnpJd016UXpNMW93RWpFUU1BNEdBM\
+      VVFQXhNSAphM1ZpWlMxallUQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ\
+      0VCQU1oNFlSZTF4dDU2Clg4UTJlKzcyaW52WEd0U2VBUHRoMHpRS3ltNjZJL1lRWHNEeEthbG9Ba\
+      k1QTUdlVW85eTRvK0RxU0VlQXczeFoKSHloaFl4OEx6OE1KUStBNERzRHNKWlI1ZXdlQ2NZRDB5V\
+      GROVm5PZ0Z2TldaY1RPWW84QU9naWllbjNQbkpvUApOTHluT1JuT0NQaFJOcldLRGJoYTNwako0Q\
+      lYrWnBqMGp0YXVzcTZxNXhZYkVFZ3FkQUxVbzA0L1pVNnIzQ2pCCkpQcDJ6ZlI0N21nam4xMGVxd\
+      HBvS3I5VndxNVFxZXljd2NkNXBwVnpsMm84UmFmMXdwSFBMRFR2L3YrV3Y1VGMKdDJTVWswT1ZPR\
+      ldXekJFVVZ2SGx1TUtzSjNxOUNJUDVGZGx2SHhjVzIvdndNek5tL3lZa0g2WEI4ZVZ2QzlRLwpEb\
+      VQ0NFdCVTZhVUNBd0VBQWFNak1DRXdEZ1lEVlIwUEFRSC9CQVFEQWdLa01BOEdBMVVkRXdFQi93U\
+      UZNQU1CCkFmOHdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSkZJZVV3d3JIRmJBa0tYbkpRWm9uN\
+      mtBalp3RTBBMlVUK0YKSVNlaTBPTUxHMVByOUpvalUrSG9RSUU0VVJMZzhwVm8yTXVYZnB1VEkvQ\
+      09oaG1DeTRNcys5MmFmaVQwdm1tbgpwQVRLbjNzR1hTZkJPU0ZBK2Jpc2ttWFYrNFFnb3J0Wkljb\
+      E5UL2pId1dHd1liNU05YVMvY3NtR0IwWmJDdC80Cmp1RFQ2Qm50NWR1WkhpN2srT0R2L2tNSUh0a\
+      XAwc0dhOFdGcGNwUEFIWGkwOVplWUFDek44MEttdWhuTnp3R3AKK0NGeHMwcHVBalJJTUJneTNEb\
+      zBjNVMva2N6eUlzWTJVdDhjeUQ5Tzc1VG4waWFPLzlhbnNrb0VGTDFCUisrawoxZkp0bjUyTzN5e\
+      jVkWUd6R1hUU1RWRW9UY0o0UnRGUjhwS29wc0pmSmJFSnFJcmFjeWs9Ci0tLS0tRU5EIENFUlRJR\
+      klDQVRFLS0tLS0K"
+- name: "matt-petclinic-production-cluster-etcd-ctrl-3"
+  cluster:
+    server: "https://54.224.240.25:6443"
+    certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN3akNDQ\
+      WFxZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFTTVJBd0RnWURWUVFERXdkcmRXSmwKT\
+      FdOaE1CNFhEVEl3TVRJeE9USXdNelF6TTFvWERUTXdNVEl4TnpJd016UXpNMW93RWpFUU1BNEdBM\
+      VVFQXhNSAphM1ZpWlMxallUQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ\
+      0VCQU1oNFlSZTF4dDU2Clg4UTJlKzcyaW52WEd0U2VBUHRoMHpRS3ltNjZJL1lRWHNEeEthbG9Ba\
+      k1QTUdlVW85eTRvK0RxU0VlQXczeFoKSHloaFl4OEx6OE1KUStBNERzRHNKWlI1ZXdlQ2NZRDB5V\
+      GROVm5PZ0Z2TldaY1RPWW84QU9naWllbjNQbkpvUApOTHluT1JuT0NQaFJOcldLRGJoYTNwako0Q\
+      lYrWnBqMGp0YXVzcTZxNXhZYkVFZ3FkQUxVbzA0L1pVNnIzQ2pCCkpQcDJ6ZlI0N21nam4xMGVxd\
+      HBvS3I5VndxNVFxZXljd2NkNXBwVnpsMm84UmFmMXdwSFBMRFR2L3YrV3Y1VGMKdDJTVWswT1ZPR\
+      ldXekJFVVZ2SGx1TUtzSjNxOUNJUDVGZGx2SHhjVzIvdndNek5tL3lZa0g2WEI4ZVZ2QzlRLwpEb\
+      VQ0NFdCVTZhVUNBd0VBQWFNak1DRXdEZ1lEVlIwUEFRSC9CQVFEQWdLa01BOEdBMVVkRXdFQi93U\
+      UZNQU1CCkFmOHdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSkZJZVV3d3JIRmJBa0tYbkpRWm9uN\
+      mtBalp3RTBBMlVUK0YKSVNlaTBPTUxHMVByOUpvalUrSG9RSUU0VVJMZzhwVm8yTXVYZnB1VEkvQ\
+      09oaG1DeTRNcys5MmFmaVQwdm1tbgpwQVRLbjNzR1hTZkJPU0ZBK2Jpc2ttWFYrNFFnb3J0Wkljb\
+      E5UL2pId1dHd1liNU05YVMvY3NtR0IwWmJDdC80Cmp1RFQ2Qm50NWR1WkhpN2srT0R2L2tNSUh0a\
+      XAwc0dhOFdGcGNwUEFIWGkwOVplWUFDek44MEttdWhuTnp3R3AKK0NGeHMwcHVBalJJTUJneTNEb\
+      zBjNVMva2N6eUlzWTJVdDhjeUQ5Tzc1VG4waWFPLzlhbnNrb0VGTDFCUisrawoxZkp0bjUyTzN5e\
+      jVkWUd6R1hUU1RWRW9UY0o0UnRGUjhwS29wc0pmSmJFSnFJcmFjeWs9Ci0tLS0tRU5EIENFUlRJR\
+      klDQVRFLS0tLS0K"
+- name: "matt-petclinic-production-cluster-etcd-ctrl-1"
+  cluster:
+    server: "https://35.153.132.208:6443"
+    certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN3akNDQ\
+      WFxZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFTTVJBd0RnWURWUVFERXdkcmRXSmwKT\
+      FdOaE1CNFhEVEl3TVRJeE9USXdNelF6TTFvWERUTXdNVEl4TnpJd016UXpNMW93RWpFUU1BNEdBM\
+      VVFQXhNSAphM1ZpWlMxallUQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ\
+      0VCQU1oNFlSZTF4dDU2Clg4UTJlKzcyaW52WEd0U2VBUHRoMHpRS3ltNjZJL1lRWHNEeEthbG9Ba\
+      k1QTUdlVW85eTRvK0RxU0VlQXczeFoKSHloaFl4OEx6OE1KUStBNERzRHNKWlI1ZXdlQ2NZRDB5V\
+      GROVm5PZ0Z2TldaY1RPWW84QU9naWllbjNQbkpvUApOTHluT1JuT0NQaFJOcldLRGJoYTNwako0Q\
+      lYrWnBqMGp0YXVzcTZxNXhZYkVFZ3FkQUxVbzA0L1pVNnIzQ2pCCkpQcDJ6ZlI0N21nam4xMGVxd\
+      HBvS3I5VndxNVFxZXljd2NkNXBwVnpsMm84UmFmMXdwSFBMRFR2L3YrV3Y1VGMKdDJTVWswT1ZPR\
+      ldXekJFVVZ2SGx1TUtzSjNxOUNJUDVGZGx2SHhjVzIvdndNek5tL3lZa0g2WEI4ZVZ2QzlRLwpEb\
+      VQ0NFdCVTZhVUNBd0VBQWFNak1DRXdEZ1lEVlIwUEFRSC9CQVFEQWdLa01BOEdBMVVkRXdFQi93U\
+      UZNQU1CCkFmOHdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSkZJZVV3d3JIRmJBa0tYbkpRWm9uN\
+      mtBalp3RTBBMlVUK0YKSVNlaTBPTUxHMVByOUpvalUrSG9RSUU0VVJMZzhwVm8yTXVYZnB1VEkvQ\
+      09oaG1DeTRNcys5MmFmaVQwdm1tbgpwQVRLbjNzR1hTZkJPU0ZBK2Jpc2ttWFYrNFFnb3J0Wkljb\
+      E5UL2pId1dHd1liNU05YVMvY3NtR0IwWmJDdC80Cmp1RFQ2Qm50NWR1WkhpN2srT0R2L2tNSUh0a\
+      XAwc0dhOFdGcGNwUEFIWGkwOVplWUFDek44MEttdWhuTnp3R3AKK0NGeHMwcHVBalJJTUJneTNEb\
+      zBjNVMva2N6eUlzWTJVdDhjeUQ5Tzc1VG4waWFPLzlhbnNrb0VGTDFCUisrawoxZkp0bjUyTzN5e\
+      jVkWUd6R1hUU1RWRW9UY0o0UnRGUjhwS29wc0pmSmJFSnFJcmFjeWs9Ci0tLS0tRU5EIENFUlRJR\
+      klDQVRFLS0tLS0K"
+
+users:
+- name: "matt-petclinic-production-cluster"
+  user:
+    token: "kubeconfig-user-rgjtd.c-52tqz:cxkf8fsjth4xpnd9vk7vgpz8gx95phjfzhrf2qnlq9zd9tvqkckg4h"
+
+
+contexts:
+- name: "matt-petclinic-production-cluster"
+  context:
+    user: "matt-petclinic-production-cluster"
+    cluster: "matt-petclinic-production-cluster"
+- name: "matt-petclinic-production-cluster-etcd-ctrl-2"
+  context:
+    user: "matt-petclinic-production-cluster"
+    cluster: "matt-petclinic-production-cluster-etcd-ctrl-2"
+- name: "matt-petclinic-production-cluster-etcd-ctrl-3"
+  context:
+    user: "matt-petclinic-production-cluster"
+    cluster: "matt-petclinic-production-cluster-etcd-ctrl-3"
+- name: "matt-petclinic-production-cluster-etcd-ctrl-1"
+  context:
+    user: "matt-petclinic-production-cluster"
+    cluster: "matt-petclinic-production-cluster-etcd-ctrl-1"
+
+current-context: "matt-petclinic-production-cluster"
+

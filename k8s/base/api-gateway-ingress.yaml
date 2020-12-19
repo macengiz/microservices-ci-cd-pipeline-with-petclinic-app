@@ -6,11 +6,16 @@ metadata:
     kompose.image-pull-secret: regcred
     kompose.service.expose: petclinic.macengiz.com
     kompose.version: 1.22.0 (955b78124)
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
   creationTimestamp: null
   labels:
     io.kompose.service: api-gateway
   name: api-gateway
 spec:
+  tls:
+    - hosts:
+      - petclinic.macengiz.com
+      secretName: petclinic-tls
   rules:
     - host: petclinic.macengiz.com
       http:
