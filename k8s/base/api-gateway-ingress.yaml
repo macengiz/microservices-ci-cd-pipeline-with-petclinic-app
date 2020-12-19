@@ -4,7 +4,7 @@ metadata:
   annotations:
     kompose.cmd: kompose convert -f k8s/docker-compose.yml -o k8s/base
     kompose.image-pull-secret: regcred
-    kompose.service.expose: 18.206.193.93.nip.io
+    kompose.service.expose: petclinic.macengiz.com
     kompose.version: 1.22.0 (955b78124)
   creationTimestamp: null
   labels:
@@ -12,7 +12,7 @@ metadata:
   name: api-gateway
 spec:
   rules:
-    - host: 18.206.193.93.nip.io
+    - host: petclinic.macengiz.com
       http:
         paths:
           - backend:

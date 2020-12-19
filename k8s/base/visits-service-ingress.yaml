@@ -4,7 +4,7 @@ metadata:
   annotations:
     kompose.cmd: kompose convert -f k8s/docker-compose.yml -o k8s/base
     kompose.image-pull-secret: regcred
-    kompose.service.expose: petclinic.clarusway.us
+    kompose.service.expose: petclinic.macengiz.com
     kompose.version: 1.22.0 (955b78124)
     nginx.ingress.kubernetes.io/rewrite-target: /$2
   creationTimestamp: null
@@ -13,7 +13,7 @@ metadata:
   name: visits-service
 spec:
   rules:
-    - host: petclinic.clarusway.us
+    - host: petclinic.macengiz.com
       http:
         paths:
           - backend:
